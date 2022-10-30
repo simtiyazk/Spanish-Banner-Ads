@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://kit.fontawesome.com/3a14f292e5.js"></script><script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script><title>Banner</title><style type="text/css">.iframe-banner { width: 100%; }
+.showISI iframe{	transition: 0.3s; }
+iframe body {	width: 100%; }</style></head><body><div class="container"><div class="row"><div class="col"><div class="card mt-3"><div class="card-header"><h3></h3></div><div class="card-body row"><div class="col-12"><iframe class="iframe-banner" src="" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen" data-size="" id="iframe-banner"></iframe></div><div class="col" style="visibility:hidden"><p><a href="" target="_blank" id="check-time">Check banner time</a></p><p><strong>Static</strong></p><img src="" id="static"/></div></div></div></div></div></div><script>$(document).ready(function() {
+  var i = 0;
+  var url = new URL(window.location.href);
+  var size = url.searchParams.get('size');
+  var title = document.querySelector('h3');
+  var width = size.split('x')[0];
+
+  title.appendChild(document.createTextNode('Banner - ' + size));
+
+  document.getElementById('iframe-banner').src = './' + size;
+
+  document.getElementById('static').src = './' + size + '/images/backup.jpg';
+
+  $('#check-time').attr('href', size);
+
+  $('#iframe-banner').css('width', width);
+
+  $('#iframe-banner').on('load', function() {
+    var iframeBody = $(this).contents().find('body');
+    var fullIframe = document.getElementById('iframe-banner');
+    var isiClone = $(this).contents().find('body > .isi');
+    var banner = $(this).contents().find('body > #wrapper');
+
+    $(iframeBody).append('<h3 style="margin-top:66px;color:#007bff">Full ISI</h3>');
+    $(this).contents().find('.isi').clone().appendTo(iframeBody);
+    iframeBody.css({width: '100%', height: 'inherit'});
+    isiClone.attr('id', 'isi-clone');
+    isiClone.css('float', 'left');
+    banner.css({position: 'relative', marginBottom: '20px'});
+
+    fullIframe.height = '';
+    fullIframe.height = fullIframe.contentWindow.document.body.scrollHeight + 'px';
+  });
+});</script></body></html>

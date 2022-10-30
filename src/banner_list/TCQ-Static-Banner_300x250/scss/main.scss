@@ -1,0 +1,27 @@
+$banner-width: 300px;
+$banner-height: 250px;
+
+@import "../../../styles/main";
+
+
+#wrapper {
+  .absolute-position {
+    position: absolute;
+  }
+
+  // main banner styles
+  #main-panel {
+    height: $banner-height;
+    width: $banner-width;
+  }
+  #static_img{
+    width: 300px;
+    height: 250px;
+  }
+  #cta {
+    width: 132px;
+    height: 27px;
+    top: 196px;
+    left: 86px;
+  }
+}

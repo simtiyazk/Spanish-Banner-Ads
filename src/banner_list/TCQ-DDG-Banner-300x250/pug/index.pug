@@ -1,0 +1,36 @@
+extends ../../../pug/layout
+block title
+	title TCQ-LATINX-Banner-300x250
+block metaSize
+	meta(name="ad.size", content='width=300,height=250')
+block clicktags
+	script(type="text/javascript").
+		var clickTag1 = "https://www.tecentriq.com/hcc/en-espanol.html";
+		var clickTag2 = "https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program?ppinv=1";
+		var clickTag3 = "https://www.gene.com/download/pdf/tecentriq_prescribing_es.pdf";
+		var clickTag4 = "https://www.gene.com/download/pdf/tecentriq_medguide_es.pdf";
+block content
+	#wrapper.centered-layout
+		#nonISIwrapper
+			#tecentriq-logo
+			#man
+			#ctaBlock
+				#cta_bg
+					#cta_text
+					#cta_text_caret
+			#frame1
+				#frame1_bubble
+				#frame1_txt_block
+					#frame1_txt
+			#frame2
+				#frame2_bubble
+				#frame2_txt_block
+					#frame2_txt
+			#doctor
+			#frame3
+				#frame3_bubble
+				#frame3_txt_block
+					#frame3_txt
+			#frame4
+			#frame5
+		include ../../../pug/isi/isi

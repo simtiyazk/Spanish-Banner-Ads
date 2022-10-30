@@ -1,0 +1,14 @@
+extends ../../../pug/layout
+block title
+  title Static_Banner_970x90
+block metaSize
+  meta(name="ad.size", content='width=970,height=90')
+block clicktags
+  script.
+    var clickTag1 = 'https://www.tecentriq.com/hcc/en-espanol.html';
+block content
+  #wrapper.centered-layout
+    #main-panel
+      .hero
+        img.animation-placeholder.absolute-position(src="images/static_970x90.jpg")#static_img
+    #cta.absolute-position

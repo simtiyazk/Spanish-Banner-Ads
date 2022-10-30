@@ -1,0 +1,379 @@
+$banner-width: 728px;
+$banner-height: 90px;
+
+@import "../../../styles/main";
+.preloader {
+  z-index: 9;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: $banner-width;
+  height: $banner-height;
+  // background: url("../images/preload-bg.jpg") no-repeat;
+  // background-size: contain;
+}
+
+#wrapper {
+  background-color: #dfcfdb;
+  font-family: "Open Sans", sans-serif;
+  background-size: contain;
+  .absolute-position {
+    position: absolute;
+  }
+  #nonISIwrapper {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 425px;
+    height: $banner-height;
+  }
+  img,
+  div {
+    position: absolute;
+  }
+  #tecentriq_logo {
+    top: 10px;
+    left: 326px;
+    width: 95px;
+    height: auto;
+  }
+  #f1bg {
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: auto;
+  }
+  #actor{
+    bottom: 2px;
+    left: 6px;
+    width: 111px;
+    height: auto;
+  }
+  #f2txt {
+    top: 32px;
+    left: 207px;
+    width: 166px;
+    height: auto;
+    opacity: 0;
+  }
+  #f3gradient {
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 90px;
+    opacity: 0;
+  }
+  #f3txt {
+    top: -7px;
+    left: -11px;
+    width: 225px;
+    height: auto;
+    opacity: 0;
+  }
+  #f4txt {
+    top: -5px;
+    left: -30px;
+    width: 337px;
+    height: auto;
+    opacity: 0;
+  }
+  #f5gradient {
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: auto;
+    opacity: 0;
+  }
+  #f5txt {
+    top: 23px;
+    left: -18px;
+    width: 316px;
+    height: auto;
+    opacity: 0;
+  }
+  #avastin_logo{
+    top: 22px;
+    left: 118px;
+    width: 144px;
+    height: auto;
+    opacity: 0;
+  }
+  #ctaBlock{
+    top: 53px;
+    left: 275px;
+    width: 145px;
+    height: auto;
+    opacity: 0;
+  }
+}
+
+// ISI styles
+#isiMain * {
+  pointer-events: all;
+}
+
+#isiMain {
+  opacity: 1;
+  width: 298px;
+  height: $banner-height;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  background-color: #fff;
+  #pi {
+    background-color: #63174f;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-size: 11.3px;
+    line-height: 13.3px;
+    left: 0;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+    padding: 3px 0 5px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+#isi_wrapper {
+  height: 67px !important;
+  width: 296px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 21px;
+  z-index: 3;
+}
+
+.iScrollVerticalScrollbar {
+  background-color: #d9d9d9;
+  top: 6px !important;
+  right: 5px !important;
+  height: 57px !important;
+  width: 6px !important;
+  position: absolute;
+  z-index: 9999;
+  overflow: visible !important;
+}
+
+.iScrollIndicator {
+  width: 6px !important;
+  height: 8px !important;
+  margin-top: 0;
+  right: 0px !important;
+  position: absolute;
+  background: #812c7a;
+  cursor: pointer;
+  display: block !important;
+  top: 0px;
+}
+
+.isi,
+#isi-clone {
+  width: 300px;
+  padding-left: 9px;
+  padding-right: 19px;
+  padding-top: 0;
+  color: #5e6463;
+  font-weight: 400;
+}
+
+.isi .padding-b-zero,
+#isi-clone .padding-b-zero {
+  padding-bottom: 0;
+}
+
+.isi p,
+#isi-clone p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12.5px;
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.isi .title,
+#isi-clone .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  margin: 0;
+  padding-top: 5px;
+  color: #7b2374;
+}
+.isilinks {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  margin: 0;
+  padding-top: 3px;
+  color: #000000;
+  line-height: 15px;
+}
+.isilinks {
+  a {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: 700 !important;
+  }
+}
+
+.isi .head,
+#isi-clone .head {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  margin: 0;
+  padding-top: 3px;
+  color: #7b2374;
+  line-height: 15px;
+}
+
+.isi .head:first-child,
+#isi-clone .head:first-child {
+  padding-top: 0;
+}
+
+.isi strong,
+#isi-clone strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+.isi .m-bold,
+#isi-clone .m-bold {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.isi .mt5,
+#isi-clone .mt5 {
+  margin-top: 5px;
+}
+
+.isi .mtb9,
+#isi-clone .mtb9 {
+  margin: 9px 0;
+}
+
+.isi .mb15,
+#isi-clone .mb15 {
+  margin-bottom: 25px;
+  margin-top: 13px;
+  text-align: right;
+}
+
+.isi .f10,
+#isi-clone .f10 {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.isi .non-break,
+#isi-clone .non-break {
+  white-space: nowrap;
+}
+
+.isi ul,
+#isi-clone ul {
+  width: 290px;
+  top: -3px;
+  left: -29px;
+  margin: 0px 0 -2px;
+  list-style: none;
+}
+
+.isi ul li,
+#isi-clone ul li {
+  font-size: 12.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  padding-bottom: 3px;
+}
+
+.isi ul li span,
+#isi-clone ul li span {
+  color: #000000;
+}
+
+.isi ul li::before,
+#isi-clone ul li::before {
+  content: "•";
+  color: #000000;
+  font-weight: bold;
+  display: inline-block;
+  top: 0px;
+  width: 11px;
+  font-size: 12px;
+  margin-left: -11px;
+}
+
+.isi ul.ul-clone,
+#isi-clone ul.ul-clone {
+  width: 260px;
+  top: 3px;
+  left: -18px;
+  margin: 4px 0 2px;
+}
+
+.isi ul.ul-clone li::before,
+#isi-clone ul.ul-clone li::before {
+  content: "○";
+  color: #63174f;
+  font-weight: bold;
+  display: inline-block;
+  top: 0px;
+  width: 1em;
+  font-size: 12px;
+  margin-left: -1em;
+  left: -3px;
+}
+
+.isi u,
+#isi-clone u {
+  text-decoration: underline;
+}
+
+.isi p.footer-text,
+#isi-clone p.footer-text {
+  padding-top: 4px;
+}
+
+.isi .GenentechLogo_isi {
+  position: relative !important;
+  padding-top: 13px;
+  padding-bottom: 12px;
+}
+.isiLastText {
+  padding-bottom: 20px !important;
+}
+.no-break {
+  white-space: nowrap;
+}
+.topAlign {
+  margin-top: 3px !important;
+}
+
+#isi-clone {
+  .GenentechLogo_isi {
+    position: relative !important;
+  }
+
+  &.uat {
+    left: 400px;
+    top: 0;
+
+    .legal-section {
+      height: auto;
+      width: 318px;
+    }
+  }
+}

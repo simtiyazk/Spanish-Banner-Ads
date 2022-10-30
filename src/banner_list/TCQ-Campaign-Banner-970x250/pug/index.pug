@@ -1,0 +1,27 @@
+extends ../../../pug/layout
+block title
+	title Full Campaign Banner 970x250
+block metaSize
+	meta(name="ad.size", content='width=970,height=250')
+block clicktags
+	script(type="text/javascript").
+		var clickTag1 = "https://www.tecentriq.com/hcc/en-espanol.html";
+		var clickTag2 = "https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program?ppinv=1";
+		var clickTag3 = "https://www.gene.com/download/pdf/tecentriq_prescribing_es.pdf";
+		var clickTag4 = "https://www.gene.com/download/pdf/tecentriq_medguide_es.pdf";
+block content
+	#wrapper.centered-layout
+		#nonISIwrapper
+			img(src="images/f1.jpg")#f1bg.absolute-position
+			img(src="images/actor.png")#actor.absolute-position
+			img(src="images/f2-copy.png")#f2txt.absolute-position
+			img(src="images/f3gradient.jpg")#f3gradient.absolute-position
+			img(src="images/f3txt.png")#f3txt.absolute-position
+			img(src="images/f4txt.png")#f4txt.absolute-position
+			img(src="images/f5gradient.jpg")#f5gradient.absolute-position
+			img(src="images/avastin_logo.png")#avastin_logo.absolute-position
+			img(src="images/f5txt.png")#f5txt.absolute-position
+			img(src="images/cta.png")#ctaBlock.absolute-position
+			img(src="images/tecentriq-logo.png")#tecentriq_logo.absolute-position
+		- var isFullCamapaign = true
+		include ../../../pug/isi/isi

@@ -1,0 +1,14 @@
+extends ../../../pug/layout
+block title
+  title Static_Banner_300x250
+block metaSize
+  meta(name="ad.size", content='width=300,height=250')
+block clicktags
+  script.
+    var clickTag1 = 'https://www.tecentriq.com/hcc/en-espanol.html';
+block content
+  #wrapper.centered-layout
+    #main-panel
+      .hero
+        img.animation-placeholder.absolute-position(src="images/static_img_300x250.png")#static_img
+    #cta.absolute-position
